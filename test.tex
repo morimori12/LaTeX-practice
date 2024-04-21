@@ -1,0 +1,47 @@
+\documentclass[a4paper,11pt]{jsarticle}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\Large\textmc\sffamily}
+\titleformat*{\subsection}{\Large\textmc\sffamily}
+\titleformat*{\subsubsection}{\Large\textmc\sffamily}
+%書体は以下のサイトで調整を行う
+%https://hwb.ecc.u-tokyo.ac.jp/hwb2023/applications/latex/font/
+
+% 数式
+\usepackage{amsmath,amsfonts}
+\usepackage{bm}
+% 画像
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{wrapfig}
+% 指定位置Hの使用
+\usepackage{here}
+% 任意の表題へ
+\usepackage{caption}
+\usepackage[subrefformat=parens]{subcaption}
+\captionsetup{compatibility=false}
+\usepackage{url}
+
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\tablename}{Table }
+% 表の行結合
+\usepackage{multirow}
+% 表作成
+% https://rra.yahansugi.com/scriptapplet/csv2tabular/
+% 図の挿入
+% http://www.yamamo10.jp/yamamoto/comp/latex/make_doc/insert_fig/index.php
+
+
+\begin{document}
+
+\section{はじめに}
+1つ目の引用\cite{cite1}
+
+
+2つ目の引用\cite{cite2}
+
+
+
+% 参考文献
+\bibliography{ref-test} %hoge.bibから拡張子を外した名前
+\bibliographystyle{junsrt} %参考文献出力スタイル
+\end{document}
