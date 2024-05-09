@@ -1,0 +1,54 @@
+\documentclass{beamer}
+\usepackage{hyperref}
+\usepackage{breakurl}
+
+% Beamerによる数式フォントの置き換えを阻止
+\usefonttheme{professionalfonts} 
+% コマンドの説明は註18を参照
+\usepackage[deluxe]{otf}
+\usepackage[noalphabet]{pxchfon}
+\setboldgothicfont{HaranoAjiGothic-Medium.otf} %\bfseriesの設定
+\usepackage{bm}
+
+
+
+\title{beamerでスライドを作ってみる}
+\author{morimori12}  
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{2枚目のスライド}
+  \begin{itemize}
+    \item 最初の項目
+    \item 2番目の項目
+    \item 最後の項目
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{数式}
+  真空中のマクスウェル方程式(微分形)は以下のように表される。
+  \begin{align}
+    \nabla \cdot \bm{E}  & = 0                                   \\
+    \nabla \cdot \bm{H}  & = 0                                   \\
+    \nabla \times \bm{E} & = -\dfrac{\partial\bm{B}}{\partial t} \\
+    \nabla \times \bm{H} & = \dfrac{\partial\bm{D}}{\partial t}
+  \end{align}
+  ただし、$\bm{D}=\varepsilon_0 \bm{E},\bm{B}=\mu_0 \bm{H}$と表される。
+
+  ※professionalfontsというフォントテーマを使うとBeamerによる数式フォントの置き換えを阻止することができる。\cite{takoyaki}
+\end{frame}
+
+% 参考文献
+\begin{frame}
+  \frametitle{参考文献}
+  \bibliography{refs} %hoge.bibから拡張子を外した名前
+  \bibliographystyle{junsrt} %参考文献出力スタイル
+\end{frame}
+\end{document}
